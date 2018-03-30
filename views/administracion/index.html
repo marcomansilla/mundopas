@@ -1,3 +1,10 @@
 {{ extend 'administracion.html'}}
 
-<h1>Panel de administracion</h1>
+<div class="well">
+    <h1>Ingresar a la web del prestador</h1>
+    <socios></socios>
+</div>
+
+{{block page_js}}
+<script type="module" src="{{=URL('static','vue/admindex.min.js') }}"></script>
+{{end page_js}}

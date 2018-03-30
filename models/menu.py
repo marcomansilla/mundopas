@@ -37,7 +37,7 @@ for row in db(db.productos.id>0).select(orderby=db.productos.nombre, cache=(cach
 
 for row in db(db.servicios.id>0).select(orderby=db.servicios.nombre, cache=(cache.ram, 60)):
     servicios.append(((T(row.nombre), False, URL('web','servicios', args=row.nombre.lower().replace(" ", "")), [])))
-    
+
 response.menu = [
     (T('Inicio'), request.function=='index', URL('web','index'), []),
     (T('Productos'), request.function=='productos', '#', productos),
@@ -45,6 +45,15 @@ response.menu = [
     (T('Trabaje con nosotros'), request.function=='trabaja', URL('web','trabaja'), []),
     (A(SPAN('Solicitar cotizacion',_class='cotizador'), False, '#', [])),
     (A(I(_class='fa fa-envelope-o contacto'), False, '#', [])),
+]
+
+response.menuadmin = [
+    (T('Inicio'), request.function=='index', URL('web','index'), []),
+    (T('Administracion'), request.controller=='administrar', '#', []),
+    (T('Notificaciones'), request.function=='notificaciones', URL('web','index'), []),
+    (T('Mi perfil'), request.function=='user', URL('web','index'), []),
+    (T('Cerrar sesion'), request.function=='user', URL('web','index'), []),
+
 ]
 
 def _():
