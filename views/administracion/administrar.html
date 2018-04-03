@@ -1,0 +1,75 @@
+{{extend 'administracion.html'}}
+
+<div class="well">
+    <h1>Opciones de administracion</h1>
+    <br/>
+    <div class="row">
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#" @click.prevent="editarPresentacion">
+		    <h1><i class="fa fa-file"></i></h1>
+		    <h3>Presentacion</h3>
+		</a>
+	    </div>
+	</div>
+
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#">
+		    <h1><i class="fa fa-images"></i></h1>
+		    <h3>imagenes</h3>
+		</a>
+	    </div>
+	</div>
+
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#">
+		    <h1><i class="fa fa-thumbs-up"></i></h1>
+		    <h3>Socios</h3>
+		</a>
+	    </div>
+	</div>
+
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#">
+		    <h1><i class="fa fa-box"></i></h1>
+		    <h3>Productos</h3>
+		</a>
+	    </div>
+	</div>
+
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#">
+		    <h1><i class="fa fa-cogs"></i></h1>
+		    <h3>Servicios</h3>
+		</a>
+	    </div>
+	</div>
+
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#">
+		    <h1><i class="fa fa-users"></i></h1>
+		    <h3>Productores</h3>
+		</a>
+	    </div>
+	</div>
+
+	<div class="col-sm-4 opcion">
+	    <div class="card">
+		<a href="#">
+		    <h1><i class="fa fa-envelope"></i></h1>
+		    <h3>Mensajes</h3>
+		</a>
+	    </div>
+	</div>
+
+    </div>
+</div>
+<modal  v-show="ePresentacion"></modal>
+{{block page_js}}
+<script type="module" src="{{=URL('static','vue/administrar.min.js') }}"></script>
+{{end page_js}}

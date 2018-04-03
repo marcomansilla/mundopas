@@ -48,8 +48,8 @@ response.menu = [
 ]
 
 response.menuadmin = [
-    (T('Inicio'), request.function=='index', URL('web','index'), []),
-    (T('Administracion'), request.controller=='administrar', '#', []),
+    (T('Inicio'), request.function=='index', URL('administracion','index'), []),
+    (T('Administracion'), request.controller=='administrar', URL('administracion', 'administrar'), []),
     (T('Notificaciones'), request.function=='notificaciones', URL('web','index'), []),
     (T('Mi perfil'), request.function=='user', URL('web','index'), []),
     (T('Cerrar sesion'), request.function=='user', URL('web','index'), []),
