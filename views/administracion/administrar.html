@@ -15,7 +15,7 @@
 
 	<div class="col-sm-4 opcion">
 	    <div class="card">
-		<a href="#">
+		<a href="#" @click.prevent="editarImagenes">
 		    <h1><i class="fa fa-images"></i></h1>
 		    <h3>imagenes</h3>
 		</a>
@@ -69,7 +69,16 @@
 
     </div>
 </div>
-<modal  v-show="ePresentacion"></modal>
+<modal  v-show="presentacion">
+    <span slot="title">${this.$store.state.titulo}</span>
+    <span slot="body"><presentacion></presentacion></span>
+</modal>
+
+<modal  v-show="imagenes">
+    <span slot="title">${this.$store.state.titulo}</span>
+    <span slot="body"><presentacion></presentacion></span>
+</modal>
+
 {{block page_js}}
 <script type="module" src="{{=URL('static','vue/administrar.min.js') }}"></script>
 {{end page_js}}

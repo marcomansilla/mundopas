@@ -9,4 +9,9 @@ def api():
     api.add_policy('socios','PUT')
     api.add_policy('socios','DELETE')
 
+    api.add_policy('presentacion','GET')
+    api.add_policy('presentacion','POST')
+    api.add_policy('presentacion','PUT')
+    api.add_policy('presentacion','DELETE')
+
     return api.process()
