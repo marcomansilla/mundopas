@@ -69,14 +69,14 @@
 
     </div>
 </div>
-<modal  v-show="presentacion">
+<modal name="presentacion" v-show="presentacion">
     <span slot="title">${this.$store.state.titulo}</span>
     <span slot="body"><presentacion></presentacion></span>
 </modal>
 
-<modal  v-show="imagenes">
+<modal name="imagenes"  v-show="imagenes">
     <span slot="title">${this.$store.state.titulo}</span>
-    <span slot="body"><presentacion></presentacion></span>
+    <span slot="body"><imagenes></imagenes></span>
 </modal>
 
 {{block page_js}}

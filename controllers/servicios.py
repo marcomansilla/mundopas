@@ -14,4 +14,9 @@ def api():
     api.add_policy('presentacion','PUT')
     api.add_policy('presentacion','DELETE')
 
+    api.add_policy('imagenes','GET')
+    api.add_policy('imagenes','POST')
+    api.add_policy('imagenes','PUT')
+    api.add_policy('imagenes','DELETE')
+
     return api.process()
