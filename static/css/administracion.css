@@ -150,3 +150,8 @@ li.web2py-menu-active {
 .img-container:hover .img-deletable {
     color:#ec383e
 }
+
+.modal-body {
+    height:700px;
+    overflow-y:auto;
+}
