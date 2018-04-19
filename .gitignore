@@ -229,7 +229,7 @@ venv.bak/
 
 
 # custom ignores
-dev/
+#dev/
 sessions/
 errors/
 extras/
